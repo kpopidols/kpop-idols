@@ -4,14 +4,8 @@
 html{scroll-behavior:smooth}
 body{background:#080810;color:#f0f0ff;font-family:'Nunito',sans-serif;overflow-x:hidden}
 
-/* ── LOGO SVG reproduced ── */
-.logo-wrap{display:flex;justify-content:center;align-items:center}
-.logo-svg{filter:drop-shadow(0 0 18px rgba(232,36,90,0.7)) drop-shadow(0 0 40px rgba(232,36,90,0.35))}
-
-/* ── HERO ── */
+/* HERO */
 .hero{min-height:100vh;background:radial-gradient(ellipse 80% 60% at 50% 40%,#2a0535 0%,#100018 50%,#080810 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 80px;position:relative;overflow:hidden}
-
-/* concert stage lights */
 .lights{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
 .light{position:absolute;top:-10%;width:3px;border-radius:2px;transform-origin:top center;opacity:0}
 .light:nth-child(1){left:10%;height:70%;background:linear-gradient(180deg,rgba(232,36,90,0.6),transparent);animation:beam 4s 0s infinite}
@@ -21,16 +15,10 @@ body{background:#080810;color:#f0f0ff;font-family:'Nunito',sans-serif;overflow-x
 .light:nth-child(5){left:70%;height:70%;background:linear-gradient(180deg,rgba(232,36,90,0.6),transparent);animation:beam 4s 1.7s infinite}
 .light:nth-child(6){left:85%;height:80%;background:linear-gradient(180deg,rgba(255,60,150,0.5),transparent);animation:beam 4s 0.9s infinite}
 @keyframes beam{0%,100%{opacity:0;transform:rotate(-8deg)}20%{opacity:1;transform:rotate(-3deg)}50%{opacity:0.7;transform:rotate(5deg)}80%{opacity:1;transform:rotate(-6deg)}}
-
-/* floor glow */
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(0deg,rgba(232,36,90,0.15),transparent);pointer-events:none}
-
-/* sparkles */
 .sparks{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
 .spark{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) var(--delay,0s) infinite}
 @keyframes twinkle{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
-
-.hero-logo{margin-bottom:32px;position:relative;z-index:2}
 .hero-tagline{font-size:15px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:18px;position:relative;z-index:2}
 .hero-headline{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,64px);letter-spacing:2px;line-height:1.1;margin-bottom:24px;position:relative;z-index:2}
 .hero-headline em{font-style:normal;color:#E8245A;text-shadow:0 0 30px rgba(232,36,90,0.6)}
@@ -38,17 +26,15 @@ body{background:#080810;color:#f0f0ff;font-family:'Nunito',sans-serif;overflow-x
 .badge{border:1px solid rgba(232,36,90,0.4);background:rgba(232,36,90,0.1);color:#E8245A;padding:7px 20px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
 .btn-primary{background:#E8245A;color:#fff;padding:14px 32px;border-radius:30px;font-weight:800;font-size:15px;text-decoration:none;letter-spacing:0.5px;transition:all .2s;box-shadow:0 4px 24px rgba(232,36,90,0.4)}
-.btn-primary:hover{background:#c41d4d;transform:translateY(-2px);box-shadow:0 8px 32px rgba(232,36,90,0.5)}
+.btn-primary:hover{background:#c41d4d;transform:translateY(-2px)}
 .btn-secondary{border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);padding:14px 32px;border-radius:30px;font-weight:700;font-size:15px;text-decoration:none;transition:all .2s}
 .btn-secondary:hover{border-color:rgba(232,36,90,0.5);color:#fff}
-
-/* scroll indicator */
 .scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.4;animation:bounce 2s infinite;z-index:2}
 .scroll-hint span{font-size:10px;letter-spacing:2px;text-transform:uppercase}
 .scroll-hint::after{content:'↓';font-size:18px}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
-/* ── STORY SECTION ── */
+/* STORY */
 .story{padding:100px 24px;background:linear-gradient(180deg,#080810,#0f0018,#080810);text-align:center;position:relative}
 .story::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(232,36,90,0.5),transparent)}
 .section-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#E8245A;margin-bottom:14px;font-weight:700}
@@ -56,55 +42,15 @@ body{background:#080810;color:#f0f0ff;font-family:'Nunito',sans-serif;overflow-x
 .story-text{max-width:680px;margin:0 auto;font-size:16px;line-height:1.9;color:rgba(255,255,255,0.65)}
 .story-text strong{color:#fff}
 .story-text em{color:#E8245A;font-style:normal}
-
-/* STAT ROW */
 .stats{display:flex;justify-content:center;gap:0;margin-top:64px;flex-wrap:wrap;border:1px solid rgba(255,255,255,0.06);border-radius:16px;overflow:hidden;max-width:600px;margin-left:auto;margin-right:auto}
 .stat{flex:1;min-width:120px;padding:28px 16px;text-align:center;border-right:1px solid rgba(255,255,255,0.06)}
 .stat:last-child{border-right:none}
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:42px;color:#E8245A;line-height:1}
 .stat-label{font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
 
-/* ── CARDS SECTION ── */
-.cards-section{padding:100px 24px;background:#080810;position:relative;overflow:hidden}
-.cards-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(232,36,90,0.06) 0%,transparent 65%);pointer-events:none}
-.cards-section .section-label,.cards-section .section-title{text-align:center}
-.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:760px;margin:52px auto 0}
-
-/* CARD COMPONENT */
-.game-card{border-radius:18px;cursor:pointer;transition:transform .25s,box-shadow .25s;width:100%;display:flex;flex-direction:column;align-items:center;padding:12px 12px 12px;gap:10px}
-.game-card:hover{transform:translateY(-8px) scale(1.03);z-index:10}
-.card-style-label{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:4px;text-align:center;text-transform:uppercase;width:100%;padding:4px 0}
-.card-img-wrap{width:100%;border-radius:10px;overflow:hidden}
-.card-img-wrap img{width:100%;height:auto;display:block;border-radius:10px}
-
-/* STREET */
-.street-bg{background:linear-gradient(160deg,#0d1a0d,#1e4020,#2d6030)}
-.street-frame{border:2px solid rgba(90,200,90,0.4);box-shadow:inset 0 0 20px rgba(90,200,90,0.1),0 0 30px rgba(90,200,90,0.15)}
-.street-name{color:#90ee90}
-.street-dot{background:#5ab85a}
-/* DREAMPOP */
-.dreampop-bg{background:linear-gradient(160deg,#1a0d28,#4a1570,#8a2aaa)}
-.dreampop-frame{border:2px solid rgba(180,90,220,0.4);box-shadow:inset 0 0 20px rgba(180,90,220,0.1),0 0 30px rgba(180,90,220,0.15)}
-.dreampop-name{color:#e0b0ff}
-.dreampop-dot{background:#c070e8}
-/* CYBER */
-.cyber-bg{background:linear-gradient(160deg,#040d1a,#0a2550,#103580)}
-.cyber-frame{border:2px solid rgba(0,180,255,0.4);box-shadow:inset 0 0 20px rgba(0,180,255,0.1),0 0 30px rgba(0,180,255,0.15)}
-.cyber-name{color:#80d0ff}
-.cyber-dot{background:#00b4ff}
-/* CHIC */
-.chic-bg{background:linear-gradient(160deg,#1a1208,#4a3410,#8a6018)}
-.chic-frame{border:2px solid rgba(220,170,50,0.4);box-shadow:inset 0 0 20px rgba(220,170,50,0.1),0 0 30px rgba(220,170,50,0.15)}
-.chic-name{color:#ffd280}
-.chic-dot{background:#d4a030}
-
-/* card characters as SVG silhouettes */
-.char{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-
-/* ── HOW TO PLAY ── */
+/* HOW TO */
 .howto{padding:100px 24px;background:linear-gradient(180deg,#080810,#0d0018);position:relative}
 .howto::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(232,36,90,0.5),transparent)}
-.howto .section-label,.howto .section-title{text-align:center}
 .steps-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:860px;margin:52px auto 0}
 .how-step{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:28px 22px;text-align:center;transition:border-color .2s}
 .how-step:hover{border-color:rgba(232,36,90,0.3)}
@@ -113,28 +59,20 @@ body{background:#080810;color:#f0f0ff;font-family:'Nunito',sans-serif;overflow-x
 .how-title{font-weight:900;font-size:16px;margin-bottom:8px}
 .how-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
 
-/* ── CTA SECTION ── */
+/* CTA */
 .cta-section{padding:100px 24px;text-align:center;background:#080810;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;border-radius:50%;background:radial-gradient(ellipse,rgba(232,36,90,0.12) 0%,transparent 65%);pointer-events:none}
-.cta-section .section-title{margin-bottom:14px}
 .cta-sub{color:rgba(255,255,255,0.5);font-size:15px;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
-
-/* ── FOOTER ── */
 footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;color:rgba(255,255,255,0.2);font-size:12px;letter-spacing:1px}
 </style>
 
-<!-- ══════ HERO ══════ -->
+<!-- HERO -->
 <div class="hero">
-  <div class="lights">
-    <div class="light"></div><div class="light"></div><div class="light"></div>
-    <div class="light"></div><div class="light"></div><div class="light"></div>
-  </div>
+  <div class="lights"><div class="light"></div><div class="light"></div><div class="light"></div><div class="light"></div><div class="light"></div><div class="light"></div></div>
   <div class="sparks" id="sparks"></div>
-
-  <div class="hero-logo">
-    <img src="https://kpopidols.github.io/kpop-idols/images/logo_trans.png" alt="K-Pop Idols" style="width:340px;max-width:90vw;filter:drop-shadow(0 0 24px rgba(232,36,90,0.7)) drop-shadow(0 0 50px rgba(232,36,90,0.4))">
+  <div style="margin-bottom:32px;position:relative;z-index:2">
+    <img src="https://kpopidols.github.io/kpop-idols/images/logo_trans.png" alt="K-Pop Idols" style="width:320px;max-width:85vw;filter:drop-shadow(0 0 24px rgba(232,36,90,0.8)) drop-shadow(0 0 60px rgba(232,36,90,0.4))">
   </div>
-
   <p class="hero-tagline">Le jeu de cartes K-Pop</p>
   <h1 class="hero-headline">Construis ton groupe.<br><em>Conquiers la scène.</em></h1>
   <div class="hero-badges">
@@ -149,7 +87,7 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
   <div class="scroll-hint"><span>Scroll</span></div>
 </div>
 
-<!-- ══════ STORY ══════ -->
+<!-- STORY -->
 <div class="story" id="story">
   <p class="section-label">L'univers</p>
   <h2 class="section-title">L'industrie K-Pop<br>n'attend pas</h2>
@@ -166,192 +104,50 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
   </div>
 </div>
 
-<!-- ══════ CARDS ══════ -->
-<div class="cards-section" id="cards">
+<!-- CARDS -->
+<div id="cards" style="padding:100px 24px;background:#080810;position:relative;text-align:center">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(232,36,90,0.06) 0%,transparent 65%);pointer-events:none"></div>
   <p class="section-label">Les Trainees</p>
   <h2 class="section-title">4 styles, une seule scène</h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:760px;margin:52px auto 0">
 
-    <!-- KAIA — Street -->
-    <div class="game-card" onclick="this.style.transform='translateY(-10px) scale(1.03)'">
-      <div class="card-bg street-bg"></div>
-      <div class="card-frame street-frame"></div>
-      <div class="card-content">
-        <div class="card-top">
-          <span class="card-name-tag street-name">Kaia</span>
-          <span class="card-cost-tag">1</span>
-        </div>
-        <div class="card-art" style="padding:0">
-          <img src="https://kpopidols.github.io/kpop-idols/images/STREET_0000s_0005_Kaia.jpg" alt="Kaia" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
-        </div>
-        <div class="card-bottom">
-          <div class="stat-row">
-            <span class="stat-name">Vocal</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#5ab85a"></div>
-              <div class="dot filled" style="background:#5ab85a"></div>
-              <div class="dot" style="border-color:#5ab85a55"></div>
-              <div class="dot" style="border-color:#5ab85a55"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Dance</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#5ab85a"></div>
-              <div class="dot filled" style="background:#5ab85a"></div>
-              <div class="dot filled" style="background:#5ab85a"></div>
-              <div class="dot" style="border-color:#5ab85a55"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Aura</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#5ab85a"></div>
-              <div class="dot" style="border-color:#5ab85a55"></div>
-              <div class="dot" style="border-color:#5ab85a55"></div>
-              <div class="dot" style="border-color:#5ab85a55"></div>
-            </div>
-          </div>
-        </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:720px;margin:52px auto 0">
+
+    <!-- STREET -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#5ab85a">Street</span>
+      <div style="border:3px solid #5ab85a;border-radius:12px;padding:8px;background:#0a180a;box-shadow:0 0 16px rgba(90,184,90,0.3);width:100%">
+        <img src="https://kpopidols.github.io/kpop-idols/images/STREET_0000s_0005_Kaia.jpg" alt="Street" style="width:100%;height:auto;display:block;border-radius:6px">
       </div>
     </div>
 
-    <!-- NARI — Dreampop -->
-    <div class="game-card">
-      <div class="card-bg dreampop-bg"></div>
-      <div class="card-frame dreampop-frame"></div>
-      <div class="card-content">
-        <div class="card-top">
-          <span class="card-name-tag dreampop-name">Nari</span>
-          <span class="card-cost-tag">1</span>
-        </div>
-        <div class="card-art" style="padding:0">
-          <img src="https://kpopidols.github.io/kpop-idols/images/DREAMPOP_0001s_0003_Nari.jpg" alt="Nari" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
-        </div>
-        <div class="card-bottom">
-          <div class="stat-row">
-            <span class="stat-name">Vocal</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#c070e8"></div>
-              <div class="dot filled" style="background:#c070e8"></div>
-              <div class="dot filled" style="background:#c070e8"></div>
-              <div class="dot" style="border-color:#c070e855"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Dance</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#c070e8"></div>
-              <div class="dot filled" style="background:#c070e8"></div>
-              <div class="dot" style="border-color:#c070e855"></div>
-              <div class="dot" style="border-color:#c070e855"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Aura</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#c070e8"></div>
-              <div class="dot" style="border-color:#c070e855"></div>
-              <div class="dot" style="border-color:#c070e855"></div>
-              <div class="dot" style="border-color:#c070e855"></div>
-            </div>
-          </div>
-        </div>
+    <!-- DREAMPOP -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#b45add">Dreampop</span>
+      <div style="border:3px solid #b45add;border-radius:12px;padding:8px;background:#150828;box-shadow:0 0 16px rgba(180,90,221,0.3);width:100%">
+        <img src="https://kpopidols.github.io/kpop-idols/images/DREAMPOP_0001s_0003_Nari.jpg" alt="Dreampop" style="width:100%;height:auto;display:block;border-radius:6px">
       </div>
     </div>
 
-    <!-- NIKA — Cyber -->
-    <div class="game-card">
-      <div class="card-bg cyber-bg"></div>
-      <div class="card-frame cyber-frame"></div>
-      <div class="card-content">
-        <div class="card-top">
-          <span class="card-name-tag cyber-name">Nika</span>
-          <span class="card-cost-tag">2</span>
-        </div>
-        <div class="card-art" style="padding:0">
-          <img src="https://kpopidols.github.io/kpop-idols/images/CYBER_0000s_0012_Nika.jpg" alt="Nika" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
-        </div>
-        <div class="card-bottom">
-          <div class="stat-row">
-            <span class="stat-name">Vocal</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#00b4ff"></div>
-              <div class="dot filled" style="background:#00b4ff"></div>
-              <div class="dot filled" style="background:#00b4ff"></div>
-              <div class="dot" style="border-color:#00b4ff55"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Dance</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#00b4ff"></div>
-              <div class="dot filled" style="background:#00b4ff"></div>
-              <div class="dot" style="border-color:#00b4ff55"></div>
-              <div class="dot" style="border-color:#00b4ff55"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Aura</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#00b4ff"></div>
-              <div class="dot filled" style="background:#00b4ff"></div>
-              <div class="dot" style="border-color:#00b4ff55"></div>
-              <div class="dot" style="border-color:#00b4ff55"></div>
-            </div>
-          </div>
-        </div>
+    <!-- CYBER -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#00b4ff">Cyber</span>
+      <div style="border:3px solid #00b4ff;border-radius:12px;padding:8px;background:#020c18;box-shadow:0 0 16px rgba(0,180,255,0.3);width:100%">
+        <img src="https://kpopidols.github.io/kpop-idols/images/CYBER_0000s_0012_Nika.jpg" alt="Cyber" style="width:100%;height:auto;display:block;border-radius:6px">
       </div>
     </div>
 
-    <!-- CHAEMIN — Chic -->
-    <div class="game-card">
-      <div class="card-bg chic-bg"></div>
-      <div class="card-frame chic-frame"></div>
-      <div class="card-content">
-        <div class="card-top">
-          <span class="card-name-tag chic-name">Chaemin</span>
-          <span class="card-cost-tag">2</span>
-        </div>
-        <div class="card-art" style="padding:0">
-          <img src="https://kpopidols.github.io/kpop-idols/images/CHIC_0000s_0008_Chaemin.jpg" alt="Chaemin" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
-        </div>
-        <div class="card-bottom">
-          <div class="stat-row">
-            <span class="stat-name">Vocal</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#d4a030"></div>
-              <div class="dot filled" style="background:#d4a030"></div>
-              <div class="dot" style="border-color:#d4a03055"></div>
-              <div class="dot" style="border-color:#d4a03055"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Dance</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#d4a030"></div>
-              <div class="dot filled" style="background:#d4a030"></div>
-              <div class="dot" style="border-color:#d4a03055"></div>
-              <div class="dot" style="border-color:#d4a03055"></div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <span class="stat-name">Aura</span>
-            <div class="stat-dots">
-              <div class="dot filled" style="background:#d4a030"></div>
-              <div class="dot filled" style="background:#d4a030"></div>
-              <div class="dot filled" style="background:#d4a030"></div>
-              <div class="dot" style="border-color:#d4a03055"></div>
-            </div>
-          </div>
-        </div>
+    <!-- CHIC -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#d4a030">Chic</span>
+      <div style="border:3px solid #d4a030;border-radius:12px;padding:8px;background:#160f02;box-shadow:0 0 16px rgba(212,160,48,0.3);width:100%">
+        <img src="https://kpopidols.github.io/kpop-idols/images/CHIC_0000s_0008_Chaemin.jpg" alt="Chic" style="width:100%;height:auto;display:block;border-radius:6px">
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- ══════ HOW TO PLAY ══════ -->
+<!-- HOW TO PLAY -->
 <div class="howto" id="howto">
   <p class="section-label">Gameplay</p>
   <h2 class="section-title">Comment jouer</h2>
@@ -366,7 +162,7 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
       <div class="how-icon">💪</div>
       <div class="how-num">02 — Entraîner</div>
       <div class="how-title">Forge des Idols</div>
-      <div class="how-desc">Développe Vocal, Danse et Aura. Atteins 8 points sur un membre pour lui obtenir le statut Idol — indispensable pour les grandes scènes.</div>
+      <div class="how-desc">Développe Vocal, Danse et Aura. Atteins 8 points pour obtenir le statut Idol — indispensable pour les grandes scènes.</div>
     </div>
     <div class="how-step">
       <div class="how-icon">🎤</div>
@@ -383,7 +179,7 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
   </div>
 </div>
 
-<!-- ══════ CTA ══════ -->
+<!-- CTA -->
 <div class="cta-section">
   <p class="section-label">Prêt à jouer ?</p>
   <h2 class="section-title">Premier à 40 fans<br>remporte la partie</h2>
@@ -393,14 +189,10 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
   </div>
 </div>
 
-<!-- ══════ FOOTER ══════ -->
-<footer>
-  K-POP IDOLS &nbsp;·&nbsp; Jeu de cartes &nbsp;·&nbsp; 2–4 joueurs &nbsp;·&nbsp; 8+ ans
-</footer>
+<footer>K-POP IDOLS &nbsp;·&nbsp; Jeu de cartes &nbsp;·&nbsp; 2–4 joueurs &nbsp;·&nbsp; 8+ ans</footer>
 
 <script>
-// Generate sparkles
-const sparks = document.getElementById('sparks');
+const sparks=document.getElementById('sparks');
 for(let i=0;i<60;i++){
   const s=document.createElement('div');
   s.className='spark';
