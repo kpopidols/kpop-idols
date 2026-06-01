@@ -5,7 +5,7 @@ html{scroll-behavior:smooth}
 body{background:#080810;color:#f0f0ff;font-family:'Nunito',sans-serif;overflow-x:hidden}
 
 /* HERO */
-.hero{min-height:100vh;background:radial-gradient(ellipse 80% 60% at 50% 40%,#2a0535 0%,#100018 50%,#080810 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 80px;position:relative;overflow:hidden}
+.hero{min-height:100svh;background:radial-gradient(ellipse 80% 60% at 50% 40%,#2a0535 0%,#100018 50%,#080810 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 80px;position:relative;overflow:hidden}
 .lights{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
 .light{position:absolute;top:-10%;width:3px;border-radius:2px;transform-origin:top center;opacity:0}
 .light:nth-child(1){left:10%;height:70%;background:linear-gradient(180deg,rgba(232,36,90,0.6),transparent);animation:beam 4s 0s infinite}
@@ -63,7 +63,8 @@ body{background:#080810;color:#f0f0ff;font-family:'Nunito',sans-serif;overflow-x
 .cta-section{padding:100px 24px;text-align:center;background:#080810;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;border-radius:50%;background:radial-gradient(ellipse,rgba(232,36,90,0.12) 0%,transparent 65%);pointer-events:none}
 .cta-sub{color:rgba(255,255,255,0.5);font-size:15px;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
-footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;color:rgba(255,255,255,0.2);font-size:12px;letter-spacing:1px}
+.card-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;transition:transform .25s ease,filter .25s ease}
+.card-wrap:hover{transform:translateY(-10px) scale(1.04);filter:drop-shadow(0 12px 28px var(--glow))}
 </style>
 
 <!-- HERO -->
@@ -110,10 +111,10 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
   <p class="section-label">Les Trainees</p>
   <h2 class="section-title">4 styles, une seule scène</h2>
 
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:720px;margin:52px auto 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px;max-width:720px;margin:52px auto 0">
 
     <!-- STREET -->
-    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div class="card-wrap" style="--glow:rgba(90,184,90,0.5)">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#5ab85a">Street</span>
       <div style="border:3px solid #5ab85a;border-radius:12px;padding:8px;background:#0a180a;box-shadow:0 0 16px rgba(90,184,90,0.3);width:100%">
         <img src="https://kpopidols.github.io/kpop-idols/images/STREET_0000s_0005_Kaia.jpg" alt="Street" style="width:100%;height:auto;display:block;border-radius:6px">
@@ -121,7 +122,7 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
     </div>
 
     <!-- DREAMPOP -->
-    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div class="card-wrap" style="--glow:rgba(180,90,221,0.5)">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#b45add">Dreampop</span>
       <div style="border:3px solid #b45add;border-radius:12px;padding:8px;background:#150828;box-shadow:0 0 16px rgba(180,90,221,0.3);width:100%">
         <img src="https://kpopidols.github.io/kpop-idols/images/DREAMPOP_0001s_0003_Nari.jpg" alt="Dreampop" style="width:100%;height:auto;display:block;border-radius:6px">
@@ -129,7 +130,7 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
     </div>
 
     <!-- CYBER -->
-    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div class="card-wrap" style="--glow:rgba(0,180,255,0.5)">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#00b4ff">Cyber</span>
       <div style="border:3px solid #00b4ff;border-radius:12px;padding:8px;background:#020c18;box-shadow:0 0 16px rgba(0,180,255,0.3);width:100%">
         <img src="https://kpopidols.github.io/kpop-idols/images/CYBER_0000s_0012_Nika.jpg" alt="Cyber" style="width:100%;height:auto;display:block;border-radius:6px">
@@ -137,7 +138,7 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
     </div>
 
     <!-- CHIC -->
-    <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div class="card-wrap" style="--glow:rgba(212,160,48,0.5)">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:#d4a030">Chic</span>
       <div style="border:3px solid #d4a030;border-radius:12px;padding:8px;background:#160f02;box-shadow:0 0 16px rgba(212,160,48,0.3);width:100%">
         <img src="https://kpopidols.github.io/kpop-idols/images/CHIC_0000s_0008_Chaemin.jpg" alt="Chic" style="width:100%;height:auto;display:block;border-radius:6px">
