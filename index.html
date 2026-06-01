@@ -144,44 +144,7 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
   <div class="sparks" id="sparks"></div>
 
   <div class="hero-logo">
-    <!-- Logo SVG fidèle à l'original -->
-    <svg class="logo-svg" viewBox="0 0 520 220" width="340" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur1"/>
-          <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur2"/>
-          <feMerge><feMergeNode in="blur2"/><feMergeNode in="blur1"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="s"/>
-          <feOffset dx="2" dy="3" result="offset"/>
-          <feMerge><feMergeNode in="offset"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <!-- K-POP neon text -->
-      <g filter="url(#neon)" fill="none" stroke="#E8245A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <!-- K -->
-        <line x1="18" y1="14" x2="18" y2="74"/>
-        <line x1="18" y1="44" x2="42" y2="14"/>
-        <line x1="18" y1="44" x2="46" y2="74"/>
-        <!-- dash -->
-        <line x1="56" y1="44" x2="70" y2="44"/>
-        <!-- P -->
-        <line x1="80" y1="14" x2="80" y2="74"/>
-        <path d="M80 14 Q110 14 110 32 Q110 50 80 50"/>
-        <!-- O -->
-        <ellipse cx="147" cy="44" rx="28" ry="30"/>
-        <ellipse cx="147" cy="44" rx="16" ry="18"/>
-        <!-- P -->
-        <line x1="190" y1="14" x2="190" y2="74"/>
-        <path d="M190 14 Q220 14 220 32 Q220 50 190 50"/>
-      </g>
-      <!-- idols script -->
-      <text x="260" y="75" font-family="Dancing Script, cursive" font-size="72" font-weight="700"
-            fill="#1a1a1a" filter="url(#shadow)" text-anchor="middle">idols</text>
-      <text x="258" y="73" font-family="Dancing Script, cursive" font-size="72" font-weight="700"
-            fill="#2a2a2a" text-anchor="middle">idols</text>
-    </svg>
+    <img src="https://kpopidols.github.io/kpop-idols/images/logo_trans.png" alt="K-Pop Idols" style="width:340px;max-width:90vw;filter:drop-shadow(0 0 24px rgba(232,36,90,0.7)) drop-shadow(0 0 50px rgba(232,36,90,0.4))">
   </div>
 
   <p class="hero-tagline">Le jeu de cartes K-Pop</p>
@@ -230,36 +193,8 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
           <span class="card-name-tag street-name">Kaia</span>
           <span class="card-cost-tag">1</span>
         </div>
-        <div class="card-art">
-          <svg viewBox="0 0 120 200" width="100%" style="position:absolute;inset:0">
-            <!-- Stylized Street girl silhouette -->
-            <ellipse cx="60" cy="30" rx="18" ry="20" fill="#d4a090"/>
-            <!-- hair ponytail -->
-            <path d="M42 20 Q30 10 28 30 Q26 50 38 45" fill="#1a1a1a"/>
-            <path d="M78 20 Q88 10 82 40 Q78 55 72 52 Q85 60 88 45" fill="#1a1a1a" opacity="0.8"/>
-            <path d="M44 15 Q60 5 76 15 Q80 25 78 30 Q60 35 42 30 Z" fill="#1a1a1a"/>
-            <!-- green highlight -->
-            <path d="M74 18 Q80 15 82 22 Q78 28 74 25Z" fill="#50c050" opacity="0.9"/>
-            <!-- pink hair strand -->
-            <path d="M76 25 Q90 50 86 80 Q84 90 80 95" stroke="#e060a0" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <!-- hoodie body -->
-            <rect x="34" y="52" width="52" height="55" rx="6" fill="#1a1a1a"/>
-            <!-- hoodie graphics -->
-            <text x="60" y="80" font-size="12" fill="#fff" text-anchor="middle" font-weight="800" opacity="0.5">IDOL</text>
-            <!-- arms crossed -->
-            <path d="M22 65 Q34 70 38 80 Q44 90 50 88" stroke="#d4a090" stroke-width="10" fill="none" stroke-linecap="round"/>
-            <path d="M98 65 Q86 70 82 80 Q76 90 70 88" stroke="#d4a090" stroke-width="10" fill="none" stroke-linecap="round"/>
-            <!-- jeans -->
-            <rect x="40" y="107" width="22" height="65" rx="4" fill="#7090c0"/>
-            <rect x="58" y="107" width="22" height="65" rx="4" fill="#6080b0"/>
-            <!-- chain -->
-            <path d="M58 115 Q65 130 62 145" stroke="#aaa" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
-            <!-- shoes -->
-            <ellipse cx="50" cy="175" rx="14" ry="7" fill="#999"/>
-            <ellipse cx="70" cy="175" rx="14" ry="7" fill="#888"/>
-            <!-- choker -->
-            <rect x="46" y="49" width="28" height="4" rx="2" fill="#222"/>
-          </svg>
+        <div class="card-art" style="padding:0">
+          <img src="https://kpopidols.github.io/kpop-idols/images/STREET_0000s_0005_Kaia.jpg" alt="Kaia" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
         </div>
         <div class="card-bottom">
           <div class="stat-row">
@@ -302,36 +237,8 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
           <span class="card-name-tag dreampop-name">Nari</span>
           <span class="card-cost-tag">1</span>
         </div>
-        <div class="card-art">
-          <svg viewBox="0 0 120 200" width="100%" style="position:absolute;inset:0">
-            <!-- dreampop girl silhouette -->
-            <ellipse cx="60" cy="30" rx="17" ry="19" fill="#e8b8a0"/>
-            <!-- wavy brown hair -->
-            <path d="M43 18 Q30 15 26 35 Q24 55 32 60 Q28 55 30 45 Q38 55 38 65" fill="#6b3a1f"/>
-            <path d="M77 18 Q90 15 94 35 Q96 55 88 60 Q92 55 90 45 Q82 55 82 65" fill="#6b3a1f"/>
-            <path d="M43 12 Q60 2 77 12 Q82 22 80 28 Q60 35 40 28 Z" fill="#6b3a1f"/>
-            <!-- hair band -->
-            <rect x="48" y="10" width="24" height="5" rx="2.5" fill="#88aad0"/>
-            <!-- cute tshirt -->
-            <rect x="36" y="52" width="48" height="50" rx="8" fill="#90c0e8"/>
-            <!-- cat graphic -->
-            <circle cx="60" cy="72" r="10" fill="rgba(255,255,255,0.3)"/>
-            <text x="60" y="76" font-size="12" text-anchor="middle">🐱</text>
-            <!-- arms -->
-            <path d="M36 60 Q24 65 20 78" stroke="#e8b8a0" stroke-width="10" fill="none" stroke-linecap="round"/>
-            <path d="M84 60 Q96 65 100 78" stroke="#e8b8a0" stroke-width="10" fill="none" stroke-linecap="round"/>
-            <!-- peace signs hands -->
-            <circle cx="18" cy="82" r="8" fill="#e8b8a0"/>
-            <circle cx="102" cy="82" r="8" fill="#e8b8a0"/>
-            <!-- cargo pants -->
-            <rect x="40" y="102" width="20" height="68" rx="4" fill="#9ab0d0"/>
-            <rect x="60" y="102" width="20" height="68" rx="4" fill="#88a0c0"/>
-            <!-- necklace -->
-            <path d="M48 50 Q60 58 72 50" stroke="#ccc" stroke-width="1.5" fill="none"/>
-            <!-- shoes -->
-            <ellipse cx="49" cy="173" rx="13" ry="6" fill="#e8e0d0"/>
-            <ellipse cx="71" cy="173" rx="13" ry="6" fill="#e8e0d0"/>
-          </svg>
+        <div class="card-art" style="padding:0">
+          <img src="https://kpopidols.github.io/kpop-idols/images/DREAMPOP_0001s_0003_Nari.jpg" alt="Nari" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
         </div>
         <div class="card-bottom">
           <div class="stat-row">
@@ -374,44 +281,8 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
           <span class="card-name-tag cyber-name">Nika</span>
           <span class="card-cost-tag">2</span>
         </div>
-        <div class="card-art">
-          <svg viewBox="0 0 120 200" width="100%" style="position:absolute;inset:0">
-            <!-- cyber girl -->
-            <ellipse cx="60" cy="28" rx="17" ry="18" fill="#d8b8c8"/>
-            <!-- pink+blue twin tails -->
-            <path d="M44 15 Q30 5 20 25 Q15 45 25 55 Q20 45 28 40 Q32 55 36 60" fill="#ff80c0" opacity="0.9"/>
-            <path d="M76 15 Q90 5 100 25 Q105 45 95 55 Q100 45 92 40 Q88 55 84 60" fill="#40e0ff" opacity="0.9"/>
-            <path d="M43 10 Q60 0 77 10 Q82 22 78 26 Q60 32 42 26 Z" fill="#1a1a2a"/>
-            <!-- headphones -->
-            <path d="M43 20 Q43 8 60 8 Q77 8 77 20" stroke="#333" stroke-width="5" fill="none"/>
-            <rect x="36" y="17" width="12" height="14" rx="4" fill="#ff80c0"/>
-            <rect x="72" y="17" width="12" height="14" rx="4" fill="#40e0ff"/>
-            <!-- goggles -->
-            <rect x="44" y="22" width="14" height="8" rx="4" fill="#ff80c0" opacity="0.7"/>
-            <rect x="62" y="22" width="14" height="8" rx="4" fill="#40e0ff" opacity="0.7"/>
-            <!-- tactical vest -->
-            <rect x="36" y="48" width="48" height="45" rx="6" fill="#1a2a3a"/>
-            <rect x="40" y="52" width="16" height="20" rx="3" fill="#0d1a28"/>
-            <rect x="64" y="52" width="16" height="20" rx="3" fill="#0d1a28"/>
-            <!-- circuit lines on vest -->
-            <path d="M48 65 L52 65 L52 68 L56 68" stroke="#00b4ff" stroke-width="1" fill="none" opacity="0.6"/>
-            <!-- crop top under -->
-            <rect x="44" y="93" width="32" height="12" rx="4" fill="#fff" opacity="0.15"/>
-            <!-- holographic skirt -->
-            <path d="M36 95 Q42 130 40 155 L50 155 Q52 125 60 115 Q68 125 70 155 L80 155 Q78 130 84 95 Z" fill="url(#holo)"/>
-            <defs><linearGradient id="holo" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#80d0ff" stop-opacity="0.6"/><stop offset="50%" stop-color="#e080ff" stop-opacity="0.6"/><stop offset="100%" stop-color="#80ffee" stop-opacity="0.6"/></linearGradient></defs>
-            <!-- circuit legs -->
-            <path d="M45 130 Q42 145 44 155" stroke="#00b4ff" stroke-width="1.5" fill="none" opacity="0.5"/>
-            <path d="M75 130 Q78 145 76 155" stroke="#00b4ff" stroke-width="1.5" fill="none" opacity="0.5"/>
-            <!-- boots -->
-            <rect x="38" y="155" width="22" height="20" rx="4" fill="#fff" opacity="0.9"/>
-            <rect x="60" y="155" width="22" height="20" rx="4" fill="#fff" opacity="0.9"/>
-            <!-- collar spikes -->
-            <rect x="50" y="46" width="3" height="5" rx="1" fill="#888" transform="rotate(-5,51,49)"/>
-            <rect x="56" y="44" width="3" height="5" rx="1" fill="#888"/>
-            <rect x="62" y="46" width="3" height="5" rx="1" fill="#888" transform="rotate(5,64,49)"/>
-            <rect x="68" y="48" width="3" height="5" rx="1" fill="#888" transform="rotate(10,70,51)"/>
-          </svg>
+        <div class="card-art" style="padding:0">
+          <img src="https://kpopidols.github.io/kpop-idols/images/CYBER_0000s_0012_Nika.jpg" alt="Nika" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
         </div>
         <div class="card-bottom">
           <div class="stat-row">
@@ -454,52 +325,8 @@ footer{padding:32px 24px;border-top:1px solid rgba(255,255,255,0.06);text-align:
           <span class="card-name-tag chic-name">Chaemin</span>
           <span class="card-cost-tag">2</span>
         </div>
-        <div class="card-art">
-          <svg viewBox="0 0 120 200" width="100%" style="position:absolute;inset:0">
-            <!-- chic elegant girl -->
-            <ellipse cx="60" cy="27" rx="17" ry="19" fill="#f0c8b0"/>
-            <!-- silver white hair long -->
-            <path d="M43 15 Q28 12 24 35 Q20 60 28 80 Q24 70 26 55 Q34 65 36 80 Q38 90 38 105" fill="#c8c8c8" opacity="0.9"/>
-            <path d="M77 15 Q92 12 96 35 Q100 60 92 80 Q96 70 94 55 Q86 65 84 80 Q82 90 82 105" fill="#c8c8c8" opacity="0.9"/>
-            <path d="M43 10 Q60 1 77 10 Q83 22 80 28 Q60 34 40 28 Z" fill="#c0c0c0"/>
-            <!-- earrings -->
-            <circle cx="43" cy="35" r="3" fill="#d4a030"/>
-            <circle cx="77" cy="35" r="3" fill="#d4a030"/>
-            <!-- mic -->
-            <ellipse cx="92" cy="55" rx="5" ry="8" fill="#888"/>
-            <rect x="90" y="63" width="4" height="15" fill="#666"/>
-            <path d="M86 68 Q92 72 98 68" stroke="#888" stroke-width="2" fill="none"/>
-            <!-- right arm holding mic -->
-            <path d="M78 60 Q85 58 92 55" stroke="#f0c8b0" stroke-width="9" fill="none" stroke-linecap="round"/>
-            <!-- white blouse -->
-            <rect x="38" y="48" width="44" height="52" rx="6" fill="#f8f8f8"/>
-            <!-- bow tie -->
-            <path d="M52 55 L58 60 L52 65 Z" fill="#1a1a1a"/>
-            <path d="M68 55 L62 60 L68 65 Z" fill="#1a1a1a"/>
-            <circle cx="60" cy="60" r="4" fill="#2a2a2a"/>
-            <!-- vest -->
-            <rect x="44" y="50" width="32" height="50" rx="4" fill="#1a1a1a" opacity="0.7"/>
-            <rect x="52" y="50" width="16" height="50" rx="0" fill="none" stroke="#f8f8f8" stroke-width="0.5"/>
-            <!-- left arm -->
-            <path d="M38 62 Q28 68 24 75" stroke="#f0c8b0" stroke-width="9" fill="none" stroke-linecap="round"/>
-            <!-- checkered skirt -->
-            <rect x="38" y="100" width="44" height="35" rx="4" fill="#1a1a1a"/>
-            <pattern id="check" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-              <rect width="4" height="4" fill="#fff" opacity="0.15"/>
-              <rect x="4" y="4" width="4" height="4" fill="#fff" opacity="0.15"/>
-            </pattern>
-            <rect x="38" y="100" width="44" height="35" rx="4" fill="url(#check)"/>
-            <!-- belt with chain -->
-            <rect x="36" y="97" width="48" height="5" rx="2.5" fill="#d4a030" opacity="0.8"/>
-            <!-- fishnet tights -->
-            <rect x="40" y="135" width="18" height="45" rx="3" fill="#3a3a3a" opacity="0.7"/>
-            <rect x="62" y="135" width="18" height="45" rx="3" fill="#333" opacity="0.7"/>
-            <!-- boots -->
-            <rect x="38" y="172" width="20" height="12" rx="3" fill="#808080"/>
-            <rect x="62" y="172" width="20" height="12" rx="3" fill="#707070"/>
-            <!-- necklace -->
-            <path d="M48 50 Q60 56 72 50" stroke="#d4a030" stroke-width="1.5" fill="none"/>
-          </svg>
+        <div class="card-art" style="padding:0">
+          <img src="https://kpopidols.github.io/kpop-idols/images/CHIC_0000s_0008_Chaemin.jpg" alt="Chaemin" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:10px 10px 0 0">
         </div>
         <div class="card-bottom">
           <div class="stat-row">
