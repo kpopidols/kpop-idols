@@ -13,19 +13,92 @@
   --text:#f0f0ff;--text-dim:#b0adc8;
   --gold:#d4a94e;
   --pad:20px;
+  --sidebar:240px;
 }
 html,body{background:var(--dark);color:var(--text);font-family:'Nunito',sans-serif;font-size:17px;line-height:1.7;overflow-x:hidden;-webkit-text-size-adjust:100%}
-.page{max-width:600px;margin:0 auto;padding-bottom:80px}
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:100;background:#0a0a14;border-bottom:3px solid var(--hot);box-shadow:0 2px 24px rgba(232,36,90,0.3);display:flex;align-items:stretch}
-.nav-back{display:flex;align-items:center;justify-content:center;width:44px;flex-shrink:0;color:var(--muted);font-size:20px;text-decoration:none;border-right:1px solid rgba(255,255,255,0.08);transition:color .15s}
-.nav-back:hover{color:var(--hot)}
-.nav-tabs{display:flex;flex:1;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.nav-tabs::-webkit-scrollbar{display:none}
-.nav-btn{flex:1;min-width:0;height:52px;padding:0 6px;background:none;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-size:11px;font-weight:800;color:var(--muted);letter-spacing:0;white-space:nowrap;text-transform:uppercase;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all .2s}
-.nav-btn.active{color:var(--hot);border-bottom-color:var(--hot);background:rgba(232,36,90,0.1)}
-.nav-btn:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+/* ══ MOBILE — bottom tab bar ══ */
+.nav-bottom{
+  display:flex;
+  position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:#0a0a14;
+  border-top:3px solid var(--hot);
+  box-shadow:0 -2px 24px rgba(232,36,90,0.25);
+  height:64px;
+}
+.nav-bottom .nav-back{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:64px;flex-shrink:0;
+  color:var(--muted);font-size:18px;text-decoration:none;
+  border-right:1px solid rgba(255,255,255,0.08);
+  transition:color .15s;gap:2px;
+}
+.nav-bottom .nav-back span{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px}
+.nav-bottom .nav-back:hover{color:var(--hot)}
+.nav-bottom .nav-tabs{display:flex;flex:1}
+.nav-bottom .nav-btn{
+  flex:1;height:100%;padding:0 4px;
+  background:none;border:none;cursor:pointer;
+  font-family:'Nunito',sans-serif;font-size:10px;font-weight:800;
+  color:var(--muted);letter-spacing:0.3px;white-space:nowrap;
+  text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  border-top:3px solid transparent;margin-top:-3px;
+  transition:all .2s;
+}
+.nav-bottom .nav-btn .nav-icon{font-size:22px;line-height:1}
+.nav-bottom .nav-btn.active{color:var(--hot);border-top-color:var(--hot);background:rgba(232,36,90,0.1)}
+.nav-bottom .nav-btn:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+
+/* ══ DESKTOP — sidebar ══ */
+.nav-sidebar{display:none}
+
+@media(min-width:768px){
+  .nav-bottom{display:none}
+  .nav-sidebar{
+    display:flex;flex-direction:column;
+    position:fixed;top:0;left:0;bottom:0;width:var(--sidebar);z-index:100;
+    background:#0a0a14;
+    border-right:3px solid var(--hot);
+    box-shadow:4px 0 24px rgba(232,36,90,0.15);
+    padding:32px 0 24px;
+  }
+  .sidebar-logo{
+    padding:0 24px 32px;
+    border-bottom:1px solid rgba(255,255,255,0.07);
+    margin-bottom:24px;
+  }
+  .sidebar-logo-title{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:4px;color:var(--hot);text-shadow:0 0 20px rgba(232,36,90,0.4);line-height:1}
+  .sidebar-logo-sub{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:6px;color:var(--text-dim)}
+  .sidebar-nav{display:flex;flex-direction:column;gap:6px;padding:0 16px;flex:1}
+  .sidebar-btn{
+    display:flex;align-items:center;gap:14px;
+    padding:14px 16px;border-radius:12px;
+    background:none;border:1px solid transparent;
+    cursor:pointer;font-family:'Nunito',sans-serif;
+    font-size:15px;font-weight:800;color:var(--muted);
+    text-align:left;transition:all .2s;letter-spacing:0.3px;
+  }
+  .sidebar-btn .sb-icon{font-size:22px;flex-shrink:0}
+  .sidebar-btn:hover{background:rgba(255,255,255,0.05);color:var(--text)}
+  .sidebar-btn.active{background:rgba(232,36,90,0.12);border-color:rgba(232,36,90,0.35);color:var(--hot)}
+  .sidebar-btn.active .sb-icon{filter:drop-shadow(0 0 6px rgba(232,36,90,0.6))}
+  .sidebar-back{
+    margin:0 16px;padding:14px 16px;
+    display:flex;align-items:center;gap:12px;
+    border-radius:12px;border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.04);
+    color:var(--text-dim);font-size:14px;font-weight:700;
+    text-decoration:none;transition:all .2s;
+  }
+  .sidebar-back:hover{border-color:var(--hot);color:var(--hot)}
+}
+
+/* ══ LAYOUT ══ */
+.page{max-width:600px;margin:0 auto;padding-bottom:80px}
+@media(min-width:768px){
+  .page{margin-left:var(--sidebar);max-width:none;padding-bottom:40px}
+}
 
 .panel{display:none}.panel.active{display:block}
 
@@ -199,13 +272,27 @@ tbody tr:last-child td{border-bottom:none}
 <body>
 <div class="page">
 
-<!-- NAV -->
-<div class="nav">
-  <a href="index.html" class="nav-back">←</a>
+<!-- NAV SIDEBAR (desktop) -->
+<div class="nav-sidebar">
+  <div class="sidebar-logo">
+    <div class="sidebar-logo-title">K-POP</div>
+    <div class="sidebar-logo-sub">IDOLS</div>
+  </div>
+  <div class="sidebar-nav">
+    <button class="sidebar-btn active" onclick="show('rules',this)"><span class="sb-icon">📖</span> Règles du jeu</button>
+    <button class="sidebar-btn" onclick="show('setup',this)"><span class="sb-icon">🎴</span> Mise en place</button>
+    <button class="sidebar-btn" onclick="show('quickref',this)"><span class="sb-icon">📋</span> Aide de jeu</button>
+  </div>
+  <a href="index.html" class="sidebar-back">← Retour à l'accueil</a>
+</div>
+
+<!-- NAV BOTTOM (mobile) -->
+<div class="nav-bottom">
+  <a href="index.html" class="nav-back"><span style="font-size:20px">←</span><span>Accueil</span></a>
   <div class="nav-tabs">
-    <button class="nav-btn active" onclick="show('rules',this)">📖 Règles</button>
-    <button class="nav-btn" onclick="show('setup',this)">🎴 Mise en place</button>
-    <button class="nav-btn" onclick="show('quickref',this)">📋 Aide de jeu</button>
+    <button class="nav-btn active" onclick="show('rules',this)"><span class="nav-icon">📖</span>Règles</button>
+    <button class="nav-btn" onclick="show('setup',this)"><span class="nav-icon">🎴</span>Mise en place</button>
+    <button class="nav-btn" onclick="show('quickref',this)"><span class="nav-icon">📋</span>Aide de jeu</button>
   </div>
 </div>
 
@@ -564,10 +651,16 @@ tbody tr:last-child td{border-bottom:none}
 function show(id, btn) {
   var panels = document.querySelectorAll('.panel');
   for (var i = 0; i < panels.length; i++) panels[i].classList.remove('active');
-  var btns = document.querySelectorAll('.nav-btn');
+  var btns = document.querySelectorAll('.nav-btn, .sidebar-btn');
   for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
   document.getElementById('panel-' + id).classList.add('active');
-  btn.classList.add('active');
+  // active le bouton cliqué + son équivalent dans l'autre nav
+  var allBtns = document.querySelectorAll('.nav-btn, .sidebar-btn');
+  for (var i = 0; i < allBtns.length; i++) {
+    if (allBtns[i].getAttribute('onclick') === btn.getAttribute('onclick')) {
+      allBtns[i].classList.add('active');
+    }
+  }
   window.scrollTo(0, 0);
 }
 </script>
